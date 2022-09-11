@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Player.tscn" type="PackedScene" id=1]
+
+[sub_resource type="BoxShape" id=1]
+
+[sub_resource type="CubeMesh" id=2]
+
+[node name="Main" type="Node"]
+
+[node name="Ground Collision" type="StaticBody" parent="."]
+transform = Transform( 31.5932, 0, 0, 0, 1.09629, 0, 0, 0, 31.5932, 0, 0, 0 )
+
+[node name="Collision Area" type="CollisionShape" parent="Ground Collision"]
+shape = SubResource( 1 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Ground Collision"]
+mesh = SubResource( 2 )
+
+[node name="CameraPivot" type="Position3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.891007, 0.453991, 0, -0.453991, 0.891007, 0, 16.482, 17.4947 )
+
+[node name="Camera" type="Camera" parent="CameraPivot"]
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
