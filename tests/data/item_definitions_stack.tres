@@ -1,0 +1,21 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/gloot/item_protoset.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+json_data = "[
+    {
+        \"id\": \"minimal_item\"
+    },
+    {
+        \"id\": \"big_item\",
+        \"weight\": 20,
+		\"image\": \"res://images/item_book_blue.png\"
+    },
+    {
+        \"id\": \"stackable_item\",
+        \"stack_size\": 10,
+		\"image\": \"res://images/item_scroll_blue.png\"
+    }
+]"

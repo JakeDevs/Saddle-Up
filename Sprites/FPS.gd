@@ -7,6 +7,8 @@ onready var accel = ACCEL_DEFAULT
 var gravity = 20
 var jump = 5
 
+var health = 100
+
 var cam_accel = 40
 var mouse_sense = 0.1
 var snap
